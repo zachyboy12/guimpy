@@ -1,0 +1,18 @@
+gui mygui
+gui mygui2
+text mytext -gui 'mygui' -text 'Hello, World!'
+text mytext2 -gui 'mygui2' -text 'Hello World Again!'
+
+\while True:
+\        event1, attributes1 = mygui.get_current_event()
+\        event2, attributes2 = mygui2.get_current_event()
+\        print(guimpy.closed_all)
+\        if guimpy.closed_all:
+\            break
+\        elif event1 == 'close':
+\            mygui.stop()
+\        elif event2 == 'close':
+\            mygui2.stop()
+\#end
+
+run
